@@ -51,12 +51,15 @@ for i in X.columns:
         clf.fit(X_.iloc[train].fillna(0).to_frame(), Y.iloc[train])
         y_score = clf.predict_proba(X_.iloc[test].fillna(0).to_frame())
         roc_temp.append(roc_auc_score(Y.iloc[test], y_score[:,1]))
-        roc_values.append(np.array(roc_temp).mean())
+    roc_values.append(np.array(roc_temp).mean())
 print(len(roc_values))
 
-'''
+
 roc_table = pd.DataFrame({'features':X.columns, 'mean_roc_auc_score': roc_values})
 roc_table=roc_table.reset_index(drop=True)
 roc_table = roc_table.sort_values(by=['mean_roc_auc_score'], ascending=False)
 print(roc_table)
-'''
+
+
+data_x = data.drop(['loan', 'housing'], axis=1)
+print(data_x)
