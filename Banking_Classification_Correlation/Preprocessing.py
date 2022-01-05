@@ -66,5 +66,6 @@ print(data.isnull().sum())
 
 # Dropping Duplicated Values
 data = data.drop_duplicates()
+data_original = data.copy()
 print(len(data))
 
