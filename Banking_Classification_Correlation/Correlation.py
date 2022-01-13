@@ -32,10 +32,13 @@ data_df['y'] = Y_smt
 print(data_df)
 
 
-# checking client subscribers
+# checking client subscribers (checking if the data is balanced or not)
 plt.figure(figsize=(5, 5))
 b = sns.countplot(x ='y', data = data_df, order=data_df["y"].value_counts().index)
 b.axes.set_title("has the client subscribed a term deposit?",fontsize=22)
 b.set_ylabel("Count",fontsize=15)
 b.tick_params(labelsize=12)
-plt.show()
+#plt.show()
+
+
+
