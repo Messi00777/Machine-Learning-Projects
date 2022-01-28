@@ -6,7 +6,7 @@ from sklearn.model_selection import StratifiedKFold
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import roc_auc_score
 from pylab import rcParams
-rcParams['figure.figsize'] = 10,5
+#rcParams['figure.figsize'] = 10,5
 from sklearn.ensemble import BaggingClassifier
 from plot_metric.functions import BinaryClassification
 import scikitplot as skplt
